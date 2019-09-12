@@ -1,0 +1,17 @@
+.only-op {
+    text-align: center !important; 
+    vertical-align: middle !important; 
+    margin-top: 20px !important;
+    width: 100%;
+}
+
+
+.op {
+    display: none;
+    padding: 0;
+}
+
+.btn-op {
+    width: 20px;
+    padding: 0;
+}
