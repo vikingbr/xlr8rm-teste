@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { getXlr8Token, getXlr8Data } from '../services/Xlr8rmApi.jsx';
-import $ from 'jquery';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { getXlr8Data } from '../services/Xlr8rmApi.jsx';
 import {Bar} from 'react-chartjs-2';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+
+import {observable} from "mobx";
+import {observer} from "mobx-react";
 
 var val1 = [];
 var key1 = [];
@@ -18,7 +20,9 @@ var dataValues = [];
 
 var responseData = [];
 
-export default class Chart extends Component {
+@observer
+class Chart extends Component {
+	@observable counter = 0;
 
     constructor(props) {
         super(props);
