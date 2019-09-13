@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import $ from 'jquery';
+// import $ from 'jquery';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TableOfDatas from './components/TableOfDatas';
+import Chart from './components/Chart';
 
-import { getXlr8Token, getXlr8Data }from './services/Xlr8rmApi.jsx';
+import { getXlr8Token }from './services/Xlr8rmApi.jsx';
 
 let response = getXlr8Token();
 
@@ -22,15 +24,17 @@ ReactDOM.render(
                         <h3>Hello {response.user.name}</h3>
                     </div>
                     <div className='col align-self-end' id='btn-save' style={{height: '40px'}}>
-                        <button type="button" className="btn btn-secondary" id='save' style={{width:'70%', float: 'right', height:'65px', fontSize:'35px'}}>Save Changes</button>
+                        <button type="button" className="btn btn-secondary" id='save' style={{width:'70%', float: 'right', height:'65px', fontSize:'35px'}} disabled>Save Changes</button>
                     </div>
                 </div>
                 <TableOfDatas />
             </div>
             <div className='col-md-4' style={{textAlign: 'center'}}>
-                <img src={response.user.avatar} width="500px" height="300px"/>
+                <img src={response.user.avatar} alt={response.user.name} width="500px" height="300px"/>
             </div>
         </div>
+
+        <Chart />
     </div>
 
 , document.getElementById('root'));
