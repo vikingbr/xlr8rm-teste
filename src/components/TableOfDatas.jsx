@@ -31,7 +31,7 @@ export default class TableOfDatas extends Component {
     componentDidMount() {
         this.calcOperation('');
 
-        this.setState({response:(getXlr8Data(getXlr8Token().accessToken))});
+        this.setState({response:(getXlr8Data())});
     }
 
     render() {

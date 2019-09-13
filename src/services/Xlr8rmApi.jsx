@@ -22,10 +22,10 @@ export function getXlr8Token() {
     return resp;
 }
 
-export function getXlr8Data(token) {
+export function getXlr8Data() {
     let resp = '';
     $.ajax({
-        url: 'https://test.xlr8rms.com/get-data?accessToken='+ token,
+        url: 'https://test.xlr8rms.com/get-data?accessToken='+ getXlr8Token().accessToken,
         async: false,
         dataType: 'json',
         success:function(response){
