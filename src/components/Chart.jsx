@@ -3,9 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { getXlr8Data } from '../services/Xlr8rmApi.jsx';
 import {Bar} from 'react-chartjs-2';
 
-import $ from 'jquery';
-
-
 var val1 = [];
 var key1 = [];
 var val2 = [];

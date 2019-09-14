@@ -51,13 +51,13 @@ export function postXlr8Data(requestData, token) {
         data: requestData,
         success:function(response, textStatus, xhr){
             resp = response;
-            console.log(resp);
-            console.log(textStatus);
+            // console.log(resp);
+            // console.log(textStatus);
             resp = xhr.status
         },
         error: function(err) {
             resp = err;
-            console.log(err.status+" - "+err.statusText);
+            // console.log(err.status+" - "+err.statusText);
         }
     });
     return resp;

@@ -201,9 +201,9 @@ export default class TableOfDatas extends Component {
     onTodoChange(eventTarget){
         console.log('eventTarget');
         $("[id^='save'" )[0].removeAttribute('disabled')
-        console.log(eventTarget);
-        console.log(eventTarget.id);
-        console.log(eventTarget.value);
+        // console.log(eventTarget);
+        // console.log(eventTarget.id);
+        // console.log(eventTarget.value);
     }
 
 }

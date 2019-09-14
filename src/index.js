@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
-
-// import $ from 'jquery';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TableOfDatas from './components/TableOfDatas';
@@ -30,7 +26,7 @@ ReactDOM.render(
                 <TableOfDatas />
             </div>
             <div className='col-md-4' style={{textAlign: 'center'}}>
-                <img src={response.user.avatar} alt={response.user.name} width="500px" height="300px"/>
+                <img src={response.user.avatar} alt={response.user.name} width="350px" height="300px"/>
             </div>
         </div>
 
