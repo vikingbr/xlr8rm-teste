@@ -5,8 +5,6 @@ import {Bar} from 'react-chartjs-2';
 
 import $ from 'jquery';
 
-import {observable} from "mobx";
-import {observer} from "mobx-react";
 
 var val1 = [];
 var key1 = [];
@@ -20,9 +18,7 @@ var dataValues = [];
 
 var responseData = [];
 
-@observer
-class Chart extends Component {
-	@observable counter = 0;
+export default class Chart extends Component {
 
     constructor(props) {
         super(props);
